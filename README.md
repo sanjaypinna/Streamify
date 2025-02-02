@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Streamify
+
+Streamify is a frontend application that displays an analytics dashboard for a fictional music streaming service called "Streamify." The dashboard presents key metrics and data visualizations, allowing the service's management team to gain insights into user activity, revenue, and content performance. The goal is to build a functional and visually appealing dashboard that is both responsive and user-friendly.
 
 ## Getting Started
 
@@ -22,7 +24,21 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Documentation
+
+### Thought Process
+
+The main objective was to create a dashboard that is both functional and visually appealing. The dashboard includes key metrics and data visualizations to provide insights into user activity, revenue, and content performance. The design is responsive and user-friendly, ensuring that it works well on various devices.
+
+### Running the Application
+
+To run the application, follow these steps:
+
+1. Clone the repository.
+2. Install the dependencies using `npm install` or `yarn install`.
+3. Start the development server using `npm run dev` or `yarn dev`.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the dashboard.
+
 
 ## Learn More
 
