@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -6,7 +6,7 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   flexRender,
-  createColumnHelper,
+  ColumnDef,
   SortingState,
 } from "@tanstack/react-table";
 import {
@@ -19,57 +19,19 @@ import {
   ChevronsRight,
 } from "lucide-react";
 
-interface Stream {
-  id: string;
-  songName: string;
-  artist: string;
-  dateStreamed: string;
-  streamCount: number;
-  userId: string;
-}
-interface DataTableProps {
-  data: Stream[];
+export interface DataTableProps<TData> {
+  data: TData[];
+  columns: ColumnDef<TData>[];
+  title?: string;
 }
 
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  return `${year}-${month}-${day} ${hours}:${minutes}`;
-};
-
-export const DataTable: React.FC<DataTableProps> = ({ data }) => {
-  const [sorting, setSorting] = useState<SortingState>([]);
-  const [globalFilter, setGlobalFilter] = useState("");
-
-  const columnHelper = createColumnHelper<Stream>();
-
-  const columns = [
-    columnHelper.accessor("songName", {
-      header: "Song Name",
-      cell: (info) => info.getValue(),
-    }),
-    columnHelper.accessor("artist", {
-      header: "Artist",
-      cell: (info) => info.getValue(),
-    }),
-    columnHelper.accessor("dateStreamed", {
-      header: "Date Streamed",
-      cell: (info) => formatDate(info.getValue()),
-      sortingFn: "datetime",
-    }),
-    columnHelper.accessor("streamCount", {
-      header: "Stream Count",
-      cell: (info) => info.getValue().toString(),
-    }),
-    columnHelper.accessor("userId", {
-      header: "User ID",
-      cell: (info) => info.getValue(),
-    }),
-  ];
+export function DataTable<TData>({ 
+  data, 
+  columns, 
+  title 
+}: DataTableProps<TData>) {
+  const [sorting, setSorting] = React.useState<SortingState>([]);
+  const [globalFilter, setGlobalFilter] = React.useState("");
 
   const table = useReactTable({
     data,
@@ -92,8 +54,8 @@ export const DataTable: React.FC<DataTableProps> = ({ data }) => {
   });
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-6">
-      <p className=" font-bold text-lg pb-2">Data Table</p>
+    <div >
+      <p className="font-bold text-lg pb-2">{title}</p>
       <div className="mb-4">
         <input
           type="text"
@@ -159,7 +121,7 @@ export const DataTable: React.FC<DataTableProps> = ({ data }) => {
       </div>
 
       {/* Pagination Controls */}
-      <div className="mt-4 flex items-center  flex-wrap gap-2 justify-between">
+      <div className="mt-4 flex items-center flex-wrap gap-2 justify-between">
         <div className="flex items-center gap-2">
           <button
             className="p-1 rounded hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -213,4 +175,4 @@ export const DataTable: React.FC<DataTableProps> = ({ data }) => {
       </div>
     </div>
   );
-};
+}

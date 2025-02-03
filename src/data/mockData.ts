@@ -1,39 +1,113 @@
 import { User, UserCheck, IndianRupee, Crown, TrendingUp } from "lucide-react";
 export const keyMetrics = [
-    {
-        title: "Total Users",
-        value: 98567,
-        icon: User,
-        trend: 9.23,
-        isPositive: true
-    },
-    {
-        title: "Active Users",
-        value: 8767,
-        icon: UserCheck,
-        trend: 12.23,
-        isPositive: true
-    },
-    {
-        title: "Total Streams",
-        value: 54344,
-        icon: TrendingUp,
-        trend: 19.23,
-        isPositive: false
-    },
-    {
-        title: "Revenue",
-        value: 231200,
-        icon: IndianRupee,
-        trend: 5.23,
-        isPositive: true
-    },
-    {
-        title: "Top Artist",
-        value: " Taylor Swift",
-        icon: Crown
-
-    },
+  {
+    title: "Total Users",
+    value: 98567,
+    icon: User,
+    trend: 9.23,
+    isPositive: true,
+    data: [
+      { month: "January", value: 98567 },
+      { month: "February", value: 80000 },
+      { month: "March", value: 83000 },
+      { month: "April", value: 86000 },
+      { month: "May", value: 88000 },
+      { month: "June", value: 90000 },
+      { month: "July", value: 92000 },
+      { month: "August", value: 94000 },
+      { month: "September", value: 95000 },
+      { month: "October", value: 96000 },
+      { month: "November", value: 97000 },
+      { month: "December", value: 98000 },
+      { month: "January", value: 98567 },
+    ],
+  },
+  {
+    title: "Active Users",
+    value: 8767,
+    icon: UserCheck,
+    trend: 12.23,
+    isPositive: true,
+    data: [
+      { month: "January", value: 8767 },
+      { month: "February", value: 5400 },
+      { month: "March", value: 5800 },
+      { month: "April", value: 6200 },
+      { month: "May", value: 6700 },
+      { month: "June", value: 7200 },
+      { month: "July", value: 7600 },
+      { month: "August", value: 8000 },
+      { month: "September", value: 8300 },
+      { month: "October", value: 8500 },
+      { month: "November", value: 8600 },
+      { month: "December", value: 8700 },
+      { month: "January", value: 8767 },
+    ],
+  },
+  {
+    title: "Total Streams",
+    value: 54344,
+    icon: TrendingUp,
+    trend: 19.23,
+    isPositive: false,
+    data: [
+      { month: "January", value: 54344 },
+      { month: "February", value: 42000 },
+      { month: "March", value: 45000 },
+      { month: "April", value: 47000 },
+      { month: "May", value: 50000 },
+      { month: "June", value: 52000 },
+      { month: "July", value: 53000 },
+      { month: "August", value: 54000 },
+      { month: "September", value: 54500 },
+      { month: "October", value: 55000 },
+      { month: "November", value: 54800 },
+      { month: "December", value: 54600 },
+      { month: "January", value: 54344 },
+    ],
+  },
+  {
+    title: "Revenue",
+    value: 231200,
+    icon: IndianRupee,
+    trend: 5.23,
+    isPositive: true,
+    data: [
+      { month: "January", value: 15000 },
+      { month: "February", value: 60000 },
+      { month: "March", value: 17000 },
+      { month: "April", value: 1800 },
+      { month: "May", value: 19000 },
+      { month: "June", value: 20000 },
+      { month: "July", value: 21000 },
+      { month: "August", value: 21500 },
+      { month: "September", value: 20000 },
+      { month: "October", value: 22000 },
+      { month: "November", value: 22000 },
+      { month: "December", value: 23000 },
+      { month: "January", value: 23100 },
+    ],
+  },
+  {
+    title: "Top Artist",
+    value: " Taylor Swift",
+    icon: Crown,
+    data: [
+      { month: "January", value: "Taylor Swift" },
+      { month: "February", value: "Drake" },
+      { month: "March", value: "The Weeknd" },
+      { month: "April", value: "Taylor Swift" },
+      { month: "May", value: "Bad Bunny" },
+      { month: "June", value: "Ed Sheeran" },
+      { month: "July", value: "BTS" },
+      { month: "August", value: "Ariana Grande" },
+      { month: "September", value: "Taylor Swift" },
+      { month: "October", value: "Billie Eilish" },
+      { month: "November", value: "Drake" },
+      { month: "December", value: "Taylor Swift" },
+      { month: "January", value: "The Weeknd" },
+    ],
+  },
 ];
 
 export const revenueDistribution = [
@@ -59,7 +133,7 @@ export const userGrowthData = [
 ];
 
 
-export const topSongs= [
+export const topSongs = [
   { song: 'Skyfall', streams: 1200 },
   { song: 'Believer', streams: 1000 },
   { song: 'Paiya Dei', streams: 800 },
@@ -68,20 +142,20 @@ export const topSongs= [
 ];
 
 export const recentStreams = [
-    { id: '1', songName: 'Cruel Summer', artist: 'Taylor Swift', dateStreamed: '2025-01-10T14:23:45Z', streamCount: 1234, userId: 'user123' },
-    { id: '2', songName: 'Vampire', artist: 'Olivia Rodrigo', dateStreamed: '2025-01-10T14:22:30Z', streamCount: 987, userId: 'user456' },
-    { id: '3', songName: 'Last Night', artist: 'Morgan Wallen', dateStreamed: '2025-01-10T14:21:15Z', streamCount: 876, userId: 'user789' },
-    { id: '4', songName: 'Kill Bill', artist: 'SZA', dateStreamed: '2025-01-10T14:20:00Z', streamCount: 765, userId: 'user234' },
-    { id: '5', songName: 'Anti-Hero', artist: 'Taylor Swift', dateStreamed: '2025-01-10T14:19:45Z', streamCount: 654, userId: 'user567' },
-    { id: '6', songName: 'Flowers', artist: 'Miley Cyrus', dateStreamed: '2025-01-09T18:10:25Z', streamCount: 1450, userId: 'user678' },
-    { id: '7', songName: 'As It Was', artist: 'Harry Styles', dateStreamed: '2025-01-09T17:55:30Z', streamCount: 1320, userId: 'user890' },
-    { id: '8', songName: 'Stay', artist: 'The Kid LAROI & Justin Bieber', dateStreamed: '2025-01-09T16:45:00Z', streamCount: 1205, userId: 'user901' },
-    { id: '9', songName: 'Sunflower', artist: 'Post Malone & Swae Lee', dateStreamed: '2025-01-09T15:30:10Z', streamCount: 1010, userId: 'user345' },
-    { id: '10', songName: 'Shivers', artist: 'Ed Sheeran', dateStreamed: '2025-01-09T14:15:20Z', streamCount: 980, userId: 'user567' },
-    { id: '11', songName: 'Heat Waves', artist: 'Glass Animals', dateStreamed: '2025-01-08T20:00:45Z', streamCount: 1345, userId: 'user222' },
-    { id: '12', songName: 'Good 4 U', artist: 'Olivia Rodrigo', dateStreamed: '2025-01-08T19:45:30Z', streamCount: 1195, userId: 'user678' },
-    { id: '13', songName: 'About Damn Time', artist: 'Lizzo', dateStreamed: '2025-01-08T18:30:50Z', streamCount: 1080, userId: 'user321' },
-    { id: '14', songName: 'Industry Baby', artist: 'Lil Nas X & Jack Harlow', dateStreamed: '2025-01-08T17:20:35Z', streamCount: 960, userId: 'user888' },
-    { id: '15', songName: 'Levitating', artist: 'Dua Lipa', dateStreamed: '2025-01-08T16:10:40Z', streamCount: 870, userId: 'user999' }
-  ];
-  
+  { id: '1', songName: 'Cruel Summer', artist: 'Taylor Swift', dateStreamed: '2025-01-10T14:23:45Z', streamCount: 1234, userId: 'user123' },
+  { id: '2', songName: 'Vampire', artist: 'Olivia Rodrigo', dateStreamed: '2025-01-10T14:22:30Z', streamCount: 987, userId: 'user456' },
+  { id: '3', songName: 'Last Night', artist: 'Morgan Wallen', dateStreamed: '2025-01-10T14:21:15Z', streamCount: 876, userId: 'user789' },
+  { id: '4', songName: 'Kill Bill', artist: 'SZA', dateStreamed: '2025-01-10T14:20:00Z', streamCount: 765, userId: 'user234' },
+  { id: '5', songName: 'Anti-Hero', artist: 'Taylor Swift', dateStreamed: '2025-01-10T14:19:45Z', streamCount: 654, userId: 'user567' },
+  { id: '6', songName: 'Flowers', artist: 'Miley Cyrus', dateStreamed: '2025-01-09T18:10:25Z', streamCount: 1450, userId: 'user678' },
+  { id: '7', songName: 'As It Was', artist: 'Harry Styles', dateStreamed: '2025-01-09T17:55:30Z', streamCount: 1320, userId: 'user890' },
+  { id: '8', songName: 'Stay', artist: 'The Kid LAROI & Justin Bieber', dateStreamed: '2025-01-09T16:45:00Z', streamCount: 1205, userId: 'user901' },
+  { id: '9', songName: 'Sunflower', artist: 'Post Malone & Swae Lee', dateStreamed: '2025-01-09T15:30:10Z', streamCount: 1010, userId: 'user345' },
+  { id: '10', songName: 'Shivers', artist: 'Ed Sheeran', dateStreamed: '2025-01-09T14:15:20Z', streamCount: 980, userId: 'user567' },
+  { id: '11', songName: 'Heat Waves', artist: 'Glass Animals', dateStreamed: '2025-01-08T20:00:45Z', streamCount: 1345, userId: 'user222' },
+  { id: '12', songName: 'Good 4 U', artist: 'Olivia Rodrigo', dateStreamed: '2025-01-08T19:45:30Z', streamCount: 1195, userId: 'user678' },
+  { id: '13', songName: 'About Damn Time', artist: 'Lizzo', dateStreamed: '2025-01-08T18:30:50Z', streamCount: 1080, userId: 'user321' },
+  { id: '14', songName: 'Industry Baby', artist: 'Lil Nas X & Jack Harlow', dateStreamed: '2025-01-08T17:20:35Z', streamCount: 960, userId: 'user888' },
+  { id: '15', songName: 'Levitating', artist: 'Dua Lipa', dateStreamed: '2025-01-08T16:10:40Z', streamCount: 870, userId: 'user999' }
+];
+
